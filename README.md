@@ -1,1 +1,10 @@
-# m226b-pa-bohler_wust
+# REST-Vorlagen Projekt
+
+Dieses Projekt beinhaltet ein Bespiel für die REST-Implementierung mittels Openliberty.io.
+
+Anwendung
+```
+cd finish
+mvn install
+mvn liberty:start-server
+```
