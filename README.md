@@ -1,8 +1,6 @@
-# REST-Vorlagen Projekt
+# m226b_böhler_wüst
 
-Dieses Projekt beinhaltet ein Bespiel für die REST-Implementierung mittels Openliberty.io.
-
-Anwendung
+Usage
 ```
 cd finish
 mvn install
