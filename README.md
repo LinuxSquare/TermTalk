@@ -7,7 +7,7 @@ It was written as a school-project for the IT-Module 226B.
 
 ## Usage
 ```
-cd finish
+cd finish/back-end
 mvn install
 mvn liberty:start-server
 ```
