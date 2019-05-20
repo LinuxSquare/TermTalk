@@ -9,4 +9,4 @@ mvn liberty:start-server
 
 Build up:
 
-[gimmick:yuml]( [TermChat_application]connects to -.->[broker-Server]sends ip to -.->[TermChat_application] )
+[gimmick:yuml]( [TermChat_application]connects to -.->[broker-Server] )
