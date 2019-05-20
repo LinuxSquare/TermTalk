@@ -6,3 +6,4 @@ cd finish
 mvn install
 mvn liberty:start-server
 ```
+lel
