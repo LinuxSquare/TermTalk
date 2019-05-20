@@ -6,7 +6,3 @@ cd finish
 mvn install
 mvn liberty:start-server
 ```
-
-Build up:
-
-[gimmick:yuml]( [TermChat_application]connects to -.->[broker-Server] )
