@@ -1,0 +1,21 @@
+Start von defaultServer (Open Liberty 19.0.0.4/wlp-1.0.27.cl190420190419-0642) auf OpenJDK 64-Bit Server VM, Version 1.8.0_212-8u212-b03-0ubuntu1.16.04.1-b03 (de_CH)
+[AUDIT   ] CWWKE0001I: Der Server defaultServer wurde gestartet.
+[AUDIT   ] CWWKZ0058I: dropins auf Anwendungen überwachen.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jaxb-api.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-core-2.3.0.1.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jaxb-runtime-2.3.2.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad txw2-2.3.2.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad istack-commons-runtime-3.0.8.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad stax-ex-1.8.1.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad FastInfoset-1.2.16.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jakarta.activation-api-1.2.1.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jaxb-api.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-core-2.3.0.1.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jaxb-runtime-2.3.2.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad txw2-2.3.2.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad istack-commons-runtime-3.0.8.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad stax-ex-1.8.1.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad FastInfoset-1.2.16.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[WARNUNG ] SRVE9967W: Der Manifestklassenpfad jakarta.activation-api-1.2.1.jar wurde weder in der JAR-Datei file:/home/simon/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.2/jaxb-impl-2.3.2.jar noch in deren übergeordneten Dateien gefunden.
+[AUDIT   ] CWWKT0016I: Webanwendung verfügbar: (default_host): http://192.168.1.233:9000/broker/
+[AUDIT   ] CWWKZ0001I: Die Anwendung rest ist nach 1.150 Sekunden gestartet.
+[AUDIT   ] CWWKF0012I: Im Server wurden die folgenden Features installiert: [cdi-2.0, jaxrs-2.1, jaxrsClient-2.1, jndi-1.0, jsonp-1.1, servlet-4.0].
+[AUDIT   ] CWWKF0011I: Der Server defaultServer ist bereit.
