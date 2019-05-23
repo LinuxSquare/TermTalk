@@ -25,8 +25,8 @@ cd finish/back-end
 mvn install
 mvn liberty:start-server
 ```
-The broker-service is reachable under the following link: ![](http://localhost:9000/).
-TermTalk works with the JSON data-interchange format. Data can be gotten from the broker-server under the link ![](http://localhost:9000/broker/api/user).
+The broker-service is reachable under the following link: <http://localhost:9000/>.
+TermTalk works with the JSON data-interchange format. Data can be gotten from the broker-server under the link <http://localhost:9000/broker/api/user>.
 
 The Ports are as followed:
   * HTTP: 9000
