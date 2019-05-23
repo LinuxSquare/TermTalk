@@ -1,24 +1,24 @@
 package inauen.tutorial.rest;
 
-public class Teacher {
-	
+public class User {
+
 	private String id;
 	private String vorname;
 	private String nachname;
 	private String fachbereich;
-	
-	// Damit wir immer die selben Attributnamen verwenden, machen wir noch ein paar Statics.	
+
+	// Damit wir immer die selben Attributnamen verwenden, machen wir noch ein paar Statics.
 	public static String ATTR_VORNAME = "vorname";
 	public static String ATTR_NACHNAME = "nachname";
 	public static String ATTR_FACHBEREICH = "fachbereich";
-	
-	public Teacher(String vorname, String nachname,String fachbereich)
+
+	public User(String vorname, String nachname,String fachbereich)
 	{
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.fachbereich = fachbereich;
 	}
-	
+
 	public String getVorname() {
 		return vorname;
 	}

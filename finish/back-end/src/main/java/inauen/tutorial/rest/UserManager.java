@@ -11,137 +11,137 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.enterprise.context.ApplicationScoped;
 
 /**
- * 
+ *
  * @author chris
  * Diese Klasse soll für die gesamte API vorhanden sein, deshalb "ApplikationScoped"
  */
 
 @ApplicationScoped
-public class TeacherManager {
-	
+public class UserManager {
+
 	/**
 	 * Zugriffe sollen parallel stattfinden dürfen
 	 */
-	private ConcurrentMap<String, Teacher> inMemStore = new ConcurrentHashMap<>();
-	
+	private ConcurrentMap<String, User> inMemStore = new ConcurrentHashMap<>();
+
 	/**
 	 * Brauchen wir um ID zu generieren
 	 */
 	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMM");
 	private AtomicInteger bookIdGenerator = new AtomicInteger(0);
-	
-	
+
+
 	/**
 	 * Konstruktor
 	 */
-	public TeacherManager()
+	public UserManager()
 	{
 		// Dummy Daten
 		String id1 = getNextId();
-		Teacher t1 = new Teacher("VornameTest1", "NachnameTest1", "Informatik");
+		User t1 = new User("VornameTest1", "NachnameTest1", "Informatik");
 		t1.setId(id1);
 
 		String id2 = getNextId();
-		Teacher t2 = new Teacher("VornameTest2", "NachnameTest2", "Informatik");
+		User t2 = new User("VornameTest2", "NachnameTest2", "Informatik");
 		t2.setId(id2);
 
 		String id3 = getNextId();
-		Teacher t3 = new Teacher("VornameTest3", "NachnameTest3", "Informatik");
+		User t3 = new User("VornameTest3", "NachnameTest3", "Informatik");
 		t3.setId(id3);
 
 		String id4 = getNextId();
-		Teacher t4 = new Teacher("VornameTest4", "NachnameTest4", "Informatik");
+		User t4 = new User("VornameTest4", "NachnameTest4", "Informatik");
 		t4.setId(id4);
 
-		
+
 		inMemStore.put(id1, t1);
 		inMemStore.put(id2, t2);
 		inMemStore.put(id3, t3);
 		inMemStore.put(id4, t4);
 		}
-	
-	
+
+
 	/**
-	 * Fügt der HashMap einen neuen Teacher hinzu
-	 * 
-	 * @param teacher
-	 * @return ID des Teachers
+	 * Fügt der HashMap einen neuen User hinzu
+	 *
+	 * @param user
+	 * @return ID des Users
 	 */
-	public String add(Teacher teacher)
+	public String add(User user)
 	{
 		String id = getNextId();
-		teacher.setId(id);
-		inMemStore.put(id, teacher);
+		user.setId(id);
+		inMemStore.put(id, user);
 		return id;
 	}
-	
+
 	/**
-	 * 
-	 * @param id - des Teachers
-	 * @return Teacher-Objekt
+	 *
+	 * @param id - des Users
+	 * @return User-Objekt
 	 */
-	public Teacher get(String id)
+	public User get(String id)
 	{
 		return inMemStore.get(id);
 	}
-	
+
 	/**
-	 * Gibt eine List aller Teachers zurück
-	 * @return List<Teacher>
+	 * Gibt eine List aller Users zurück
+	 * @return List<User>
 	 */
-	public List<Teacher> getAll()
+	public List<User> getAll()
 	{
-		List<Teacher> teachers = new ArrayList<>();
-		teachers.addAll(inMemStore.values());
-		return teachers;
+		List<User> users = new ArrayList<>();
+		users.addAll(inMemStore.values());
+		return users;
 	}
-	
+
 	/**
-	 * Loescht Teacher aus Datenbank
+	 * Loescht User aus Datenbank
 	 * @param id
 	 * @return Geloeschtes Objekt oder null
 	 */
-	public Teacher remove(String id)
+	public User remove(String id)
 	{
 		if (inMemStore.containsKey(id))
 		{
-			Teacher teacher = inMemStore.get(id);
+			User user = inMemStore.get(id);
 			inMemStore.remove(id);
-			return teacher;
+			return user;
 		}
-		else 
+		else
 		{
 			return null;
 		}
 	}
-	
+
 	/**
-	 * Aendert einen Teacher in seinen Attributen
-	 * 
+	 * Aendert einen User in seinen Attributen
+	 *
 	 * @param id
 	 * @param pvornamen
 	 * @param pnachnamen
 	 * @param pfachbereich
-	 * @return Teacherobjekt oder null
+	 * @return Userobjekt oder null
 	 */
-	public Teacher merge(String id, String pvornamen, String pnachnamen, String pfachbereich)
+	public User merge(String id, String pvornamen, String pnachnamen, String pfachbereich)
 	{
-		Teacher tochange = inMemStore.get(id);
-		
+		User tochange = inMemStore.get(id);
+
 		if (tochange != null)
 		{
 			tochange.setFachbereich(pfachbereich);
 			tochange.setNachname(pnachnamen);
 			tochange.setVorname(pvornamen);
-			
+
 			return tochange;
 		}
-		else 
+		else
 		{
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Private Hilfsmethode um eindeutige Keys für die Map zu generieren
 	 * @return String
