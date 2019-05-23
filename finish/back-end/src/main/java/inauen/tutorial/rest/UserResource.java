@@ -72,14 +72,13 @@ public class UserResource {
 	public Response add(JsonObject userJSON)
 	{
 		// Wir holen zuerst aus dem JSON unsere Werte
-		String vornamen = userJSON.getString(User.ATTR_VORNAME);
-		String nachname = userJSON.getString(User.ATTR_NACHNAME);
-		String fachbereich = userJSON.getString(User.ATTR_FACHBEREICH);
+		String namen = userJSON.getString(User.ATTR_NAME);
+		String ip = userJSON.getString(User.ATTR_IP);
 
 
 
 
-		User newUser = new User(vornamen, nachname, fachbereich);
+		User newUser = new User(namen, ip);
 		String id = userManager.add(newUser);
 		return Response.ok(id).build();
 	}
@@ -120,11 +119,10 @@ public class UserResource {
 	public Response put(@PathParam("id") String id, JsonObject userJSON)
 	{
 		// Wir holen zuerst aus dem JSON unsere Werte
-		String vornamen = userJSON.getString(User.ATTR_VORNAME);
-		String nachname = userJSON.getString(User.ATTR_NACHNAME);
-		String fachbereich = userJSON.getString(User.ATTR_FACHBEREICH);
+		String namen = userJSON.getString(User.ATTR_NAME);
+		String ip = userJSON.getString(User.ATTR_IP);
 
-		User changed = userManager.merge(id, vornamen, nachname, fachbereich);
+		User changed = userManager.merge(id, namen, ip);
 		if (changed != null)
 		{
 			return Response.ok(changed).build();

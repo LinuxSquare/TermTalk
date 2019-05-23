@@ -38,19 +38,19 @@ public class UserManager {
 	{
 		// Dummy Daten
 		String id1 = getNextId();
-		User t1 = new User("VornameTest1", "NachnameTest1", "Informatik");
+		User t1 = new User("NameTest1", "IPTest1");
 		t1.setId(id1);
 
 		String id2 = getNextId();
-		User t2 = new User("VornameTest2", "NachnameTest2", "Informatik");
+		User t2 = new User("NameTest2", "IPTest2");
 		t2.setId(id2);
 
 		String id3 = getNextId();
-		User t3 = new User("VornameTest3", "NachnameTest3", "Informatik");
+		User t3 = new User("NameTest3", "IPTest3");
 		t3.setId(id3);
 
 		String id4 = getNextId();
-		User t4 = new User("VornameTest4", "NachnameTest4", "Informatik");
+		User t4 = new User("NameTest4", "IPTest4");
 		t4.setId(id4);
 
 
@@ -119,20 +119,18 @@ public class UserManager {
 	 * Aendert einen User in seinen Attributen
 	 *
 	 * @param id
-	 * @param pvornamen
-	 * @param pnachnamen
-	 * @param pfachbereich
+	 * @param pnamen
+	 * @param pipn
 	 * @return Userobjekt oder null
 	 */
-	public User merge(String id, String pvornamen, String pnachnamen, String pfachbereich)
+	public User merge(String id, String pnamen, String pipn)
 	{
 		User tochange = inMemStore.get(id);
 
 		if (tochange != null)
 		{
-			tochange.setFachbereich(pfachbereich);
-			tochange.setNachname(pnachnamen);
-			tochange.setVorname(pvornamen);
+			tochange.setIP(pipn);
+			tochange.setName(pnamen);
 
 			return tochange;
 		}

@@ -20,6 +20,7 @@ U2 is used as key to get the IP out of the hashmap.
 ## Server
 
 ### Usage
+To start the Server run:
 ```
 cd finish/back-end
 mvn install
@@ -30,13 +31,13 @@ TermTalk works with the JSON data-interchange format. Data can be gotten from th
 
 The Ports are as followed:
   * HTTP: 9000
-  * HTTPS: deactivated at the moment due to complicity
+  * HTTPS: deactivated at the moment due to unwanted complicity
 
 ### Jobs of the server
 
 The server has to serve multiple functions:
   * __take user-hashkeys from users and return the associated IP address.__
-    The IP of a single user can be gotten by attaching the hashkey to the application-address (http://localhost:9000/broker/api/user/<hashkey>)
+    The IP of a single user can be gotten by sending a _get-request_ and attaching the hash key to the application-address (http://localhost:9000/broker/api/user/<hashkey>)
 
   * __akknolage new users and save ther IP in a hashmap__
-    New users will have to register themselves at the server, so other users can find them.
+    New users will have to register themselves at the server, so other users can find them. This will be done with the _post-methode_.

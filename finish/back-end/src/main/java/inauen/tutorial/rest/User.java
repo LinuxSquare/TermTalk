@@ -3,47 +3,36 @@ package inauen.tutorial.rest;
 public class User {
 
 	private String id;
-	private String vorname;
-	private String nachname;
-	private String fachbereich;
+	private String name;
+	private String ip;
+
 
 	// Damit wir immer die selben Attributnamen verwenden, machen wir noch ein paar Statics.
-	public static String ATTR_VORNAME = "vorname";
-	public static String ATTR_NACHNAME = "nachname";
-	public static String ATTR_FACHBEREICH = "fachbereich";
+	public static String ATTR_NAME = "name";
+	public static String ATTR_IP = "ip";
 
-	public User(String vorname, String nachname,String fachbereich)
+	public User(String name, String ip)
 	{
-		this.vorname = vorname;
-		this.nachname = nachname;
-		this.fachbereich = fachbereich;
+		this.name = name;
+		this.ip = ip;
 	}
 
-	public String getVorname() {
-		return vorname;
+	public String getName() {
+		return name;
 	}
-	public void setVorname(String vorname) {
-		this.vorname = vorname;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getNachname() {
-		return nachname;
+	public String getIP() {
+		return ip;
 	}
-	public void setNachname(String nachname) {
-		this.nachname = nachname;
+	public void setIP(String ip) {
+		this.ip = ip;
 	}
-	public String getFachbereich() {
-		return fachbereich;
-	}
-	public void setFachbereich(String fachbereich) {
-		this.fachbereich = fachbereich;
-	}
-
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
 }
