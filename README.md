@@ -53,5 +53,5 @@ The server has to serve multiple functions:
   * __take user-hashkeys from users and return the associated IP address.__
     The IP of a single user can be gotten by sending a _get-request_ and attaching the hash key to the application-address (<http://localhost:9000/broker/api/user/<hashkey>>)
 
-  * __acknowledge new users and save ther IP in a hashmap__
+  * __acknowledge new users and save their IP in a hashmap__
     New users will have to register themselves at the server, so other users can find them. This will be done with the _post-methode_.
