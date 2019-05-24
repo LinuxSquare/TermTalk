@@ -40,8 +40,8 @@ cd finish/back-end
 mvn install
 mvn liberty:start-server
 ```
-Once started the broker-service is reachable under the following link: <http://localhost:9000/>.
-TermTalk works with the JSON data-interchange format. Data can be gotten from the broker-server under the link <http://localhost:9000/broker/api/user>.
+Once started, the broker-service is reachable under the following link: <http://localhost:9000/>.
+TermTalk works with the JSON data-interchange format. Data can be received from the broker-server under the link <http://localhost:9000/broker/api/user>.
 
 The Ports are as followed:
   * HTTP: 9000
@@ -53,5 +53,5 @@ The server has to serve multiple functions:
   * __take user-hashkeys from users and return the associated IP address.__
     The IP of a single user can be gotten by sending a _get-request_ and attaching the hash key to the application-address (<http://localhost:9000/broker/api/user/<hashkey>>)
 
-  * __akknolage new users and save ther IP in a hashmap__
+  * __acknowledge new users and save ther IP in a hashmap__
     New users will have to register themselves at the server, so other users can find them. This will be done with the _post-methode_.
