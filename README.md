@@ -17,6 +17,20 @@ U2 is used as key to get the IP out of the hashmap.
 
 3. User1 is connecting to the IP of User2 to communicate via peer-to-peer.
 
+## Client
+
+
+### Jobs of the server
+
+The Client has to serve the following tasks:
+  * __Register himself at the broker-server__
+    This will be done with the _post-methode_.
+  * __Get the users IP he wants to talk to__
+    This will be done with the _get-methode_.
+  * __Send messages to the other user directly__
+
+  * __Receave messages by the other user__
+
 ## Server
 
 ### Usage
@@ -37,7 +51,7 @@ The Ports are as followed:
 
 The server has to serve multiple functions:
   * __take user-hashkeys from users and return the associated IP address.__
-    The IP of a single user can be gotten by sending a _get-request_ and attaching the hash key to the application-address (http://localhost:9000/broker/api/user/<hashkey>)
+    The IP of a single user can be gotten by sending a _get-request_ and attaching the hash key to the application-address (<http://localhost:9000/broker/api/user/<hashkey>>)
 
   * __akknolage new users and save ther IP in a hashmap__
     New users will have to register themselves at the server, so other users can find them. This will be done with the _post-methode_.

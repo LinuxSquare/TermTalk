@@ -38,19 +38,19 @@ public class UserManager {
 	{
 		// Dummy Daten
 		String id1 = getNextId();
-		User t1 = new User("NameTest1", "IPTest1");
+		User t1 = new User("Max", "192.168.1.3");
 		t1.setId(id1);
 
 		String id2 = getNextId();
-		User t2 = new User("NameTest2", "IPTest2");
+		User t2 = new User("Fritz", "192.168.1.4");
 		t2.setId(id2);
 
 		String id3 = getNextId();
-		User t3 = new User("NameTest3", "IPTest3");
+		User t3 = new User("Moritz", "192.168.1.5");
 		t3.setId(id3);
 
 		String id4 = getNextId();
-		User t4 = new User("NameTest4", "IPTest4");
+		User t4 = new User("Jeff", "192.168.1.6");
 		t4.setId(id4);
 
 
@@ -120,16 +120,16 @@ public class UserManager {
 	 *
 	 * @param id
 	 * @param pnamen
-	 * @param pipn
+	 * @param pip
 	 * @return Userobjekt oder null
 	 */
-	public User merge(String id, String pnamen, String pipn)
+	public User merge(String id, String pnamen, String pip)
 	{
 		User tochange = inMemStore.get(id);
 
 		if (tochange != null)
 		{
-			tochange.setIP(pipn);
+			tochange.setIP(pip);
 			tochange.setName(pnamen);
 
 			return tochange;
@@ -147,7 +147,7 @@ public class UserManager {
 	private String getNextId()
 	{
 		String date = LocalDate.now().format(formatter);
-		return String.format("%04d-%s", bookIdGenerator.incrementAndGet(), date);
+		return String.format("%04d%s", bookIdGenerator.incrementAndGet(), date);
 	}
 
 }

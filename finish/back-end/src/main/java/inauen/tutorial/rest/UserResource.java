@@ -28,7 +28,7 @@ public class UserResource {
 
 
 	/**
-	 * REST-API für HTTP-GET mit Parameter. Liefert einen Lehrer zurueck - benoetigt den Aufruf /ID
+	 * REST-API für HTTP-GET mit Parameter. Liefert einen User zurueck - benoetigt den Aufruf /ID
 	 * @param id
 	 * @return User (oder 404)
 	 */
@@ -61,7 +61,7 @@ public class UserResource {
 	}
 
 	/**
-	 * REST-API fuer HTTP-POST. Erwartet ein JSON-Objekt im POST drin. Erstellt einen neuen Lehrer
+	 * REST-API fuer HTTP-POST. Erwartet ein JSON-Objekt im POST drin. Erstellt einen neuen User
 	 * @param userJSON
 	 * @return ID
 	 */
@@ -74,10 +74,6 @@ public class UserResource {
 		// Wir holen zuerst aus dem JSON unsere Werte
 		String namen = userJSON.getString(User.ATTR_NAME);
 		String ip = userJSON.getString(User.ATTR_IP);
-
-
-
-
 		User newUser = new User(namen, ip);
 		String id = userManager.add(newUser);
 		return Response.ok(id).build();
@@ -112,7 +108,7 @@ public class UserResource {
 	 * @return Userobjekt oder 404
 	 */
 
-	@PUT
+	/*@PUT
 	@Path( "/{id}" )
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -132,7 +128,7 @@ public class UserResource {
 			return Response.status(Status.NOT_FOUND).build();
 		}
 
-	}
+	}*/
 
 
 }
