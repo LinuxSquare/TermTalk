@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liberty-plugin-config>
+    <installDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty/wlp</installDirectory>
+    <serverDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty/wlp/usr/servers/defaultServer</serverDirectory>
+    <userDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty/wlp/usr</userDirectory>
+    <serverOutputDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty/wlp/usr/servers/defaultServer</serverOutputDirectory>
+    <serverName>defaultServer</serverName>
+    <configFile>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/src/main/liberty/config/server.xml</configFile>
+    <bootstrapProperties>
+        <app.context.root>broker</app.context.root>
+        <default.http.port>9000</default.http.port>
+        <default.https.port>-1</default.https.port>
+    </bootstrapProperties>
+    <appsDirectory>dropins</appsDirectory>
+    <looseApplication>true</looseApplication>
+    <stripVersion>false</stripVersion>
+    <installAppPackages>project</installAppPackages>
+    <applicationFilename>rest-1.0-SNAPSHOT.war.xml</applicationFilename>
+    <assemblyArtifact>
+        <groupId>io.openliberty</groupId>
+        <artifactId>openliberty-runtime</artifactId>
+        <version>RELEASE</version>
+        <type>zip</type>
+    </assemblyArtifact>
+    <assemblyArchive>/home/linux/.m2/repository/io/openliberty/openliberty-runtime/19.0.0.5/openliberty-runtime-19.0.0.5.zip</assemblyArchive>
+    <assemblyInstallDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty</assemblyInstallDirectory>
+    <refresh>false</refresh>
+    <installAppsConfigDropins>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/target/liberty/wlp/usr/servers/defaultServer/configDropins/defaults/install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <projectType>war</projectType>
+    <projectCompileDependency>javax.xml.bind:jaxb-api:2.3.1</projectCompileDependency>
+    <projectCompileDependency>javax.activation:javax.activation-api:1.2.0</projectCompileDependency>
+    <projectCompileDependency>javax.activation:activation:1.1.1</projectCompileDependency>
+    <projectCompileDependency>com.sun.xml.bind:jaxb-impl:2.3.2</projectCompileDependency>
+    <projectCompileDependency>com.sun.xml.bind:jaxb-core:2.3.0.1</projectCompileDependency>
+    <warSourceDirectory>/home/linux/Documents/Coding/Java/TermTalk/finish/back-end/src/main/webapp</warSourceDirectory>
+</liberty-plugin-config>
