@@ -58,6 +58,8 @@ public class UserManager {
 		inMemStore.put(id2, t2);
 		inMemStore.put(id3, t3);
 		inMemStore.put(id4, t4);
+
+		System.out.println("Hello World");
 		}
 
 
